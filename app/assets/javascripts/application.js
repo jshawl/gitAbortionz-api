@@ -11,10 +11,4 @@
 // about supported directives.
 //
 //= require jquery
-//= require `jquery_ujs`
 //= require turbolinks
-//= require d3
-//= require states/states
-//= require states/index.controller
-//= require states/US
-//= require app

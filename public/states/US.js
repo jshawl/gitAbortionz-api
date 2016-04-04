@@ -70,8 +70,11 @@
 		d3.select(id).selectAll(".state")
 			.data(uStatePaths).enter().append("path").attr("class","state").attr("d",function(d){ return d.d;})
 			.style("fill",function(d){ return data[d.id].color; })
+			.attr("data-state", function(d){
+				 return d.id
+			})
 			.on("click", function(){
-        console.log($(this).attr(".state"))
+        console.log($(this).attr("data-state"))
       })
 	}
 	this.uStates=uStates;
