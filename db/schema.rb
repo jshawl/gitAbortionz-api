@@ -11,9 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160404131042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "states", force: :cascade do |t|
+    t.integer "measure_id"
+    t.string  "measure_name"
+    t.integer "guttmacher_id"
+    t.integer "datum"
+    t.string  "state_id"
+    t.integer "datum_date"
+    t.integer "first_year"
+    t.integer "last_year"
+    t.text    "footnotes"
+    t.string  "sources"
+  end
 
 end

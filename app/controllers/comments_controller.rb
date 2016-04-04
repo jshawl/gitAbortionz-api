@@ -1,5 +1,4 @@
 class Comment < ActionController::Base
-  belongs_to :state
 
 def index
 end

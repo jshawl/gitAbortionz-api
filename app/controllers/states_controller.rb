@@ -1,5 +1,4 @@
-class StateController < ActionController::Base
-  has_many :comments
+class StatesController < ActionController::Base
 
 def index
   respond_to do |format|
