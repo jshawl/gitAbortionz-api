@@ -27,8 +27,6 @@ class PostsController < ActionController::Base
   end
 
 
-end
-
 
 private
 
