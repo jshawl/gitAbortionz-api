@@ -1,0 +1,302 @@
+[
+  {
+    "name": "MONTANA",
+    "grade": "A-",
+    "state_id": "MN",
+    "score": 90
+  },
+  {
+    "name": "NEBRASKA",
+    "grade": "F",
+    "state_id": "NE",
+    "score": 50
+  },
+  {
+    "name": "NEVADA",
+    "grade": "B+",
+    "state_id": "NV",
+    "score": 88
+  },
+  {
+    "name": "NEW HAMPSHIRE",
+    "grade": "C+",
+    "state_id": "NH",
+    "score": 78
+  },
+  {
+    "name": "NEW JERSEY",
+    "grade": "B+",
+    "state_id": "NJ",
+    "score": 88
+  },
+  {
+    "name": "NEW MEXICO",
+    "grade": "B+",
+    "state_id": "NM",
+    "score": 88
+  },
+  {
+    "name": "NEW YORK",
+    "grade": "B+",
+    "state_id": "NY",
+    "score": 88
+  },
+  {
+    "name": "NORTH CAROLINA",
+    "grade": "F",
+    "state_id": "NC",
+    "score": 50
+  },
+  {
+    "name": "NORTH DAKOTA",
+    "grade": "F",
+    "state_id": "ND",
+    "score": 50
+  },
+  {
+    "name": "OHIO",
+    "grade": "F",
+    "state_id": "OH",
+    "score": 50
+  },
+  {
+    "name": "OKLAHOMA",
+    "grade": "F",
+    "state_id": "OK",
+    "score": 50
+  },
+  {
+    "name": "OREGON",
+    "grade": "A-",
+    "state_id": "OR",
+    "score": 90
+  },
+  {
+    "name": "PENNSYLVANIA",
+    "grade": "F",
+    "state_id": "PA",
+    "score": 50
+  },
+  {
+    "name": "RHODE ISLAND",
+    "grade": "F",
+    "state_id": "RI",
+    "score": 50
+  },
+  {
+    "name": "SOUTH CAROLINA",
+    "grade": "F",
+    "state_id": "SC",
+    "score": 50
+  },
+  {
+    "name": "SOUTH DAKOTA",
+    "grade": "F",
+    "state_id": "SD",
+    "score": 50
+  },
+  {
+    "name": "TENNESSEE",
+    "grade": "F",
+    "state_id": "TN",
+    "score": 50
+  },
+  {
+    "name": "TEXAS",
+    "grade": "F",
+    "state_id": "TX",
+    "score": 50
+  },
+  {
+    "name": "UTAH",
+    "grade": "F",
+    "state_id": "UT",
+    "score": 50
+  },
+  {
+    "name": "VERMONT",
+    "grade": "B+",
+    "state_id": "VT",
+    "score": 88
+  },
+  {
+    "name": "VIRGINIA",
+    "grade": "F",
+    "state_id": "VA",
+    "score": 50
+  },
+  {
+    "name": "WASHINGTON",
+    "grade": "A-",
+    "state_id": "WA",
+    "score": 90
+  },
+  {
+    "name": "WEST VIRGINIA",
+    "grade": "D",
+    "state_id": "WV",
+    "score": 62
+  },
+  {
+    "name": "WISCONSIN",
+    "grade": "F",
+    "state_id": "WI",
+    "score": 50
+  },
+  {
+    "name": "WYOMING",
+    "grade": "D",
+    "state_id": "WY",
+    "score": 62
+  },
+  {
+    "name": "ALABAMA",
+    "grade": "F",
+    "state_id": "AL",
+    "score": 50
+  },
+  {
+    "name": "ALASKA",
+    "grade": "B+",
+    "state_id": "AK",
+    "score": 88
+  },
+  {
+    "name": "ARIZONA",
+    "grade": "F",
+    "state_id": "AZ",
+    "score": 50
+  },
+  {
+    "name": "ARKANSAS",
+    "grade": "F",
+    "state_id": "AR",
+    "score": 50
+  },
+  {
+    "name": "CALIFORNIA",
+    "grade": "A+",
+    "state_id": "CA",
+    "score": 98
+  },
+  {
+    "name": "COLORADO",
+    "grade": "C-",
+    "state_id": "CO",
+    "score": 70
+  },
+  {
+    "name": "CONNECTICUT",
+    "grade": "A-",
+    "state_id": "CT",
+    "score": 90
+  },
+  {
+    "name": "DELAWARE",
+    "grade": "C-",
+    "state_id": "DE",
+    "score": 70
+  },
+  {
+    "name": "FLORIDA",
+    "grade": "F",
+    "state_id": "FL",
+    "score": 50
+  },
+  {
+    "name": "GEORGIA",
+    "grade": "F",
+    "state_id": "GA",
+    "score": 50
+  },
+  {
+    "name": "HAWAII",
+    "grade": "A-",
+    "state_id": "HI",
+    "score": 90
+  },
+  {
+    "name": "IDAHO",
+    "grade": "F",
+    "state_id": "ID",
+    "score": 50
+  },
+  {
+    "name": "ILLINOIS",
+    "grade": "B-",
+    "state_id": "IL",
+    "score": 80
+  },
+  {
+    "name": "INDIANA",
+    "grade": "F",
+    "state_id": "IN",
+    "score": 50
+  },
+  {
+    "name": "IOWA",
+    "grade": "C-",
+    "state_id": "IA",
+    "score": 70
+  },
+  {
+    "name": "KANSAS",
+    "grade": "F",
+    "state_id": "KS",
+    "score": 50
+  },
+  {
+    "name": "KENTUCKY",
+    "grade": "F",
+    "state_id": "KY",
+    "score": 50
+  },
+  {
+    "name": "LOUISIANA",
+    "grade": "F",
+    "state_id": "LA",
+    "score": 50
+  },
+  {
+    "name": "MAINE",
+    "grade": "B+",
+    "state_id": "ME",
+    "score": 88
+  },
+  {
+    "name": "MARYLAND",
+    "grade": "B+",
+    "state_id": "MD",
+    "score": 88
+  },
+  {
+    "name": "MASSACHUSETTS",
+    "grade": "C+",
+    "state_id": "MA",
+    "score": 78
+  },
+  {
+    "name": "MICHIGAN",
+    "grade": "F",
+    "state_id": "MI",
+    "score": 50
+  },
+  {
+    "name": "MINNESOTA",
+    "grade": "C-",
+    "state_id": "MN",
+    "score": 70
+  },
+  {
+    "name": "MISSISSIPPI",
+    "grade": "F",
+    "state_id": "MS",
+    "score": 50
+  },
+  {
+    "name": "MISSOURI",
+    "grade": "F",
+    "state_id": "MO",
+    "score": 50
+  }
+]
