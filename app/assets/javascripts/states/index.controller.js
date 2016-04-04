@@ -3,11 +3,11 @@
   angular
   .module("states")
   .controller("stateIndexController", [
-    // "StateFactory",
+    "$resource",
     StateIndexControllerFunction
   ]);
 
-  function StateIndexControllerFunction(){
-    // this.states = StateFactory.query();
+  function StateIndexControllerFunction($resource){
+    this.data = State.query();
   }
 })();

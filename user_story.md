@@ -8,7 +8,7 @@ As a user I want to click on specific state map to see more information about th
 
 For each state:
 -As a user  I want to the recent changes in abortion law
--As a user I want to see trap laws in the state
+-As a user I want to see TRAP laws in the state
 -As a user I want to see info about Ultrasound
 requirement
 -As a user I want to see info about personhood law:what number of weeks fetus is assumed to be a person
