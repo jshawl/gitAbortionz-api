@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
 root to: "states#index"
 
-  resources :states, except: [:new, :edit] do
-    resources :comments
-  end
+  resources :states, except: [:new, :edit]
+  resources :comments
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
