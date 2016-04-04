@@ -1,0 +1,8 @@
+<h2> All posts</h2>
+<div class="" data-ng-repeat="post in PostIndexViewModel| orderBy:'-created_at'">
+  {{Post.title}}
+  {{Post.img}}
+  {{Post.content}}
+  {{Post.author}}
+  {{Post.created_at}}
+</div>

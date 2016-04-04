@@ -3,7 +3,8 @@
   angular
   .module("abortion", [
   "ui.router",
-  "states"
+  "states",
+  "posts"
   ])
   .config([
     "$stateProvider",
