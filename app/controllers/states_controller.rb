@@ -1,4 +1,4 @@
-class StatesController < ActionController::Base
+class StatesController < ApplicationController
 
 def index
   respond_to do |format|
