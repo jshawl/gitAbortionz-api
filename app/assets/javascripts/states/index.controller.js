@@ -3,11 +3,11 @@
   angular
   .module("states")
   .controller("stateIndexController", [
-    "StateFactory",
+    // "StateFactory",
     StateIndexControllerFunction
   ]);
 
-  function StateIndexControllerFunction(StateFactory){
+  function StateIndexControllerFunction(){
     // this.states = StateFactory.query();
   }
 })();
