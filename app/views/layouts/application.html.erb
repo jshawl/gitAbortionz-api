@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="abortion">
+<html>
 <head>
   <title>Abortionz</title>
   <meta charset="UTF-8">
@@ -16,5 +16,8 @@
 <body>
   Welcome to "App Name"
     <%= yield %>
+    <div data-ng-app="abortion">
+      <main data-ui-view></main>
+    </div>
 </body>
 </html>
