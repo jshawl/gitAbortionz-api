@@ -11,7 +11,6 @@ Post.destroy_all
 Post.create!(stories)
 State.create!(states)
 
-
 # State.create!(data)
 #
 # State.create!(rank)
