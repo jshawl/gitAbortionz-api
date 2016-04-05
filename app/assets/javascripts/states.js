@@ -111,10 +111,7 @@
 
   function stateShowCtrlFunction(State, $stateParams){
     var stateShowVM = this;
-    State.all.$promise.then(function(){
-      State.all.forEach(function(state){
-        if(state.id == $stateParams.id){
-          stateShowVM.state = state;
+    stateShowVM.state=State.get({state_id: stateParams.state_id})
         }
       });
     });
