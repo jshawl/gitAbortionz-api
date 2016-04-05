@@ -1,21 +1,20 @@
 //=require angularjs
 //=require angular-resource
 
-
 "use strict";
 (function(){
   angular
   .module("abortion", [
-    "ui.router",
-    "states"
+    "ui.router"
   ])
   .config([
     "$stateProvider",
+    "$locationProvider",
     RouterFunction
   ]);
 
-  function RouterFunction($stateProvider){
-
+  function RouterFunction($stateProvider, $locationProvider){
+    $locationProvider.html5Mode(true);
     $stateProvider
     .state("StateIndex", {
       url: "/states",
