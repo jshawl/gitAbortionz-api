@@ -15,7 +15,7 @@
 $stateProvider
 .state("StateIndex", {
   url: "/states",
-  templateUrl: "/assets/states/index.html",
+  templateUrl: "ng-views/states/index.html",
   controller: "stateIndexController",
   controllerAs: "StateIndexViewModel"
 });
