@@ -34,8 +34,8 @@
       controllerAs: "stateIndexVM"
     })
     .state("show", {
-      url: "states/:state_id",
-      templateUrl: "states/state.show.html",
+      url: "/states/:state_id",
+      templateUrl: "/states/state.show.html",
       controller: "stateShowController",
       controllerAs: "stateShowVM"
     });
@@ -111,10 +111,9 @@
 
   function stateShowCtrlFunction(State, $stateParams){
     var stateShowVM = this;
-    stateShowVM.state=State.get({state_id: stateParams.state_id})
-        }
-      });
-    });
+    console.log("here!");
+     stateShowVM.state = State.get({state_id: $stateParams.state_id})
+
   }
 
 
