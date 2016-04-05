@@ -9,5 +9,8 @@
 
   function StateIndexControllerFunction($resource){
     this.data = State.query();
+    this.setCurrent = function(state){
+      this.current = state    
+    }
   }
 })();

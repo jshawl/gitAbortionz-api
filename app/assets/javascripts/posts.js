@@ -1,3 +1,6 @@
+//=require angularjs
+//=require angular-resource
+
 "use strict";
 (function(){
   angular
