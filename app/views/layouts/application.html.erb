@@ -14,10 +14,21 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </head>
 <body>
-  Welcome to "App Name"
+  <h1>Roe v. Wade</h1>
     <%= yield %>
     <div data-ng-app="abortion">
       <main data-ui-view></main>
     </div>
+
+<script>
+$.getJSON("/states.json", function(response){
+  var states = {}
+  for (var i = 0; i < response.length; i++){
+    states[response[i].state_id] = response[i]
+  }
+  console.log(states)
+})
+</script>
+
 </body>
 </html>

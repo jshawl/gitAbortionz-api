@@ -1,12 +1,13 @@
 //=require angularjs
 //=require angular-resource
 
+
 "use strict";
 (function(){
   angular
   .module("abortion", [
-  "ui.router",
-  "states"
+    "ui.router",
+    "states"
   ])
   .config([
     "$stateProvider",
@@ -14,13 +15,23 @@
   ]);
 
   function RouterFunction($stateProvider){
-$stateProvider
-.state("StateIndex", {
-  url: "/states",
-  templateUrl: "/",
-  controller: "stateIndexController",
-  controllerAs: "StateIndexViewModel"
-});
+
+    $stateProvider
+    .state("StateIndex", {
+      url: "/states",
+      templateUrl: "/assets/states/index.html",
+      controller: "stateIndexController",
+      controllerAs: "StateIndexViewModel"
+    });
+
+    $stateProvider
+    .state("StateIndex", {
+      url: "/states",
+      templateUrl: "/",
+      controller: "stateIndexController",
+      controllerAs: "StateIndexViewModel"
+    });
+
   }
 
 })();
