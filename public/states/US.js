@@ -72,10 +72,13 @@
 			.style("fill",function(d){ return data[d.id].color; })
 			.attr("data-state", function(d){
 
-				 return d.n
+				 return d.id
 			})
 			.on("click", function(){
-        console.log($(this).attr("data-state"))
+				var id = $(this).attr("data-state")
+				$.getJSON("/states/"+id, function(response){
+					console.log(response);
+				})
       })
 			.on("mouseover", mouseOver).on("mouseout", mouseOut);
 
