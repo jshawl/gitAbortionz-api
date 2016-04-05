@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160404192937) do
+ActiveRecord::Schema.define(version: 20160405221633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(version: 20160404192937) do
     t.string  "grade"
     t.integer "score"
     t.string  "name"
+    t.string  "roe_repeal"
+    t.string  "state_restrict"
+    t.string  "save_self"
+    t.string  "state_ban"
+    t.string  "counseling"
+    t.string  "waiting_period"
+    t.string  "two_trips"
   end
 
 end
