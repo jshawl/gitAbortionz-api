@@ -119,9 +119,6 @@
         stateShowVM.state = State.get({state_id: $stateParams.state_id})
       }
 
-
-    })();
-
   function RouterFunction($stateProvider){
     $stateProvider
     .state("index", {
@@ -182,9 +179,9 @@
 
     	function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
     		return "<h4>"+n+"</h4><table>"+
-    			"<tr><td>Grade</td><td>"+ "Stuff" +"</td></tr>"+
-    			"<tr><td>Average</td><td>"+ "Stuff" +"</td></tr>"+
-    			"<tr><td>High</td><td>"+"Stuff"+"</td></tr>"+
+    			"<tr><td>Grade</td><td>"+  +"</td></tr>"+
+    			"<tr><td>Average</td><td>"+ +"</td></tr>"+
+    			"<tr><td>Score</td><td>"+ +"</td></tr>"+
     			"</table>";
     	}
 
