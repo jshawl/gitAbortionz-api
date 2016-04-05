@@ -1,11 +1,13 @@
+//=require angularjs
+//=require angular-resource
+
 
 "use strict";
 (function(){
   angular
   .module("abortion", [
-    "ui.router",
-    "states",
-    "posts"
+  "ui.router",
+  "states"
   ])
   .config([
     "$stateProvider",
@@ -25,7 +27,7 @@
 $stateProvider
 .state("StateIndex", {
   url: "/states",
-  templateUrl: "ng-views/states/index.html",
+  templateUrl: "/",
   controller: "stateIndexController",
   controllerAs: "StateIndexViewModel"
 });
