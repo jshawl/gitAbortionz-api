@@ -8,7 +8,6 @@
   ])
   .config([
     "$stateProvider",
-    "$locationProvider",
     RouterFunction
   ])
   .factory("State", [
@@ -26,10 +25,7 @@
     stateShowCtrlFunction
   ]);
 
-  function RouterFunction($stateProvider, $locationProvider){
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false});
+  function RouterFunction($stateProvider){
       $stateProvider
       .state("index", {
         url: "/",

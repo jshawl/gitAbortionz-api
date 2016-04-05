@@ -1,11 +1,11 @@
 <div class="states">
-  <h2>{{stateShowVM.state.measure_name}}</h2>
-  <p>WHATEVER</p>
-  <p>{{stateShowVM.state.guttmacher_id}}</p>
-  <p>{{stateShowVM.state.state_id}}</p>
-  <p>{{stateShowVM.state.datum_date}}</p>
-  <p>{{stateShowVM.state.first_year}}</p>
-  <p>{{stateShowVM.state.last_year}}</p>
-  <p>{{stateShowVM.state.footnotes}}</p>
-  <p>{{stateShowVM.state.sources}}</p>
-</div>
+
+    <h2>{{stateShowVM.state.name}}</h2>
+    <p ng-if="stateShowVM.state.grade != 0">NARAL Grade: {{stateShowVM.state.grade}}</p>
+    <p ng-if="stateShowVM.state.state_restrict !=0">{{stateShowVM.state.state_restrict}}</p>
+    <p ng-if="stateShowVM.state.roe_repeal != 0">{{stateShowVM.state.roe_repeal}}</p>
+    <p ng-if="stateShowVM.state.save_self != 0">{{stateShowVM.state.save_self}}</p>
+    <p ng-if="stateShowVM.state.counseling != 0">{{stateShowVM.state.counseling}}</p>
+    <p ng-if="stateShowVM.state.waiting_period != 0">{{stateShowVM.state.waiting_period}}</p>
+    <p ng-if="stateShowVM.state.two_trips != 0">{{stateShowVM.state.two_trips}}</p>
+  </div>
