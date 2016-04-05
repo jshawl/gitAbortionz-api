@@ -6,8 +6,8 @@
 (function(){
   angular
   .module("abortion", [
-  "ui.router",
-  "states"
+    "ui.router",
+    "states"
   ])
   .config([
     "$stateProvider",
@@ -24,13 +24,13 @@
       controllerAs: "StateIndexViewModel"
     });
 
-$stateProvider
-.state("StateIndex", {
-  url: "/states",
-  templateUrl: "/",
-  controller: "stateIndexController",
-  controllerAs: "StateIndexViewModel"
-});
+    $stateProvider
+    .state("StateIndex", {
+      url: "/states",
+      templateUrl: "/",
+      controller: "stateIndexController",
+      controllerAs: "StateIndexViewModel"
+    });
 
   }
 
