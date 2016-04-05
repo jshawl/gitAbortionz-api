@@ -19,6 +19,7 @@
   ]);
 
   function RouterFunction($stateProvider){
+<<<<<<< HEAD
     $stateProvider
     .state("StateIndex", {
       url: "/states",
@@ -26,6 +27,15 @@
       controller: "stateIndexController",
       controllerAs: "StateIndexViewModel"
     });
+=======
+$stateProvider
+.state("StateIndex", {
+  url: "/states",
+  templateUrl: "ng-views/states/index.html",
+  controller: "stateIndexController",
+  controllerAs: "StateIndexViewModel"
+});
+>>>>>>> badee66a65f2e6ff0857588f70a955a812119126
   }
 
 })();
