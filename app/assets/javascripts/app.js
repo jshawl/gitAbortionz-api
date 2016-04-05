@@ -4,9 +4,9 @@
 (function(){
   angular
   .module("abortion", [
-  "ui.router",
-  "states",
-  "posts"
+    "ui.router",
+    "states",
+    "posts"
   ])
   .config([
     "$stateProvider",
@@ -14,13 +14,13 @@
   ]);
 
   function RouterFunction($stateProvider){
-$stateProvider
-.state("StateIndex", {
-  url: "/states",
-  templateUrl: "/assets/states/index.html",
-  controller: "stateIndexController",
-  controllerAs: "StateIndexViewModel"
-});
+    $stateProvider
+    .state("StateIndex", {
+      url: "/states",
+      templateUrl: "/assets/states/index.html",
+      controller: "stateIndexController",
+      controllerAs: "StateIndexViewModel"
+    });
   }
 
 })();
