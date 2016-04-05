@@ -34,8 +34,8 @@
       controllerAs: "stateIndexVM"
     })
     .state("show", {
-      url: "states/:state_id",
-      templateUrl: "states/state.show.html",
+      url: "/states/:state_id",
+      templateUrl: "/states/state.show.html",
       controller: "stateShowController",
       controllerAs: "stateShowVM"
     });
@@ -111,13 +111,8 @@
 
   function stateShowCtrlFunction(State, $stateParams){
     var stateShowVM = this;
-    State.all.$promise.then(function(){
-      State.all.forEach(function(state){
-        if(state.id == $stateParams.id){
-          stateShowVM.state = state;
-        }
-      });
-    });
+    console.log("here!");
+     stateShowVM.state = State.get({state_id: $stateParams.state_id})
   }
 
 
