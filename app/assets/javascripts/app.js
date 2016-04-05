@@ -1,10 +1,4 @@
-//=require angularjs
-//=require angular-resource
-<<<<<<< HEAD
 
-
-=======
->>>>>>> c6d36e172db4699b4958a2a7ec3c2969d2050e36
 "use strict";
 (function(){
   angular
@@ -19,7 +13,7 @@
   ]);
 
   function RouterFunction($stateProvider){
-<<<<<<< HEAD
+
     $stateProvider
     .state("StateIndex", {
       url: "/states",
@@ -27,7 +21,7 @@
       controller: "stateIndexController",
       controllerAs: "StateIndexViewModel"
     });
-=======
+
 $stateProvider
 .state("StateIndex", {
   url: "/states",
@@ -35,7 +29,7 @@ $stateProvider
   controller: "stateIndexController",
   controllerAs: "StateIndexViewModel"
 });
->>>>>>> badee66a65f2e6ff0857588f70a955a812119126
+
   }
 
 })();
