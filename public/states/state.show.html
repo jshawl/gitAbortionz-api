@@ -1,33 +1,32 @@
 
-<div class="states">
-  <div class="panel panel-success">
-    <h2 class="page-header">{{stateShowVM.state.name}}</h2>
+<h1>{{stateShowVM.state.name}}</h2>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="page-title">NARAL State Grade: {{stateShowVM.state.grade}}</h4>
+    </div>
+
+  <div class="panel-body panel-primary">
+    <h4>Current State Policies:</h4>
   </div>
-  <div class="panel-body" ng-if="stateShowVM.state.grade != 0">
-    <p>NARAL Grade: {{stateShowVM.state.grade}}</p>
-  </div>
-   <div class="panel-body">
-     <p>These are the laws on the books:</p>
-      </div>
-    <li class="list-group-item">
-       <ul class="list-group">
-      <li class="list-group-item" ng-if="stateShowVM.state.state_restrict !=0">
-        <p>{{stateShowVM.state.state_restrict}}</p>
-      </li>
-      <li class="list-group-item" ng-if="stateShowVM.state.roe_repeal != 0">
-        <p>{{stateShowVM.state.roe_repeal}}</p>
-      </li>
-      <li class="list-group-item" ng-if="stateShowVM.state.save_self != 0">
-        <p>{{stateShowVM.state.save_self}}</p>
+    <ul class="list-group">
+      <li class="list-group-item" ng-if="stateShowVM.state.waiting_period != 0">
+        <p>★ {{stateShowVM.state.waiting_period}}</p>
       </li>
       <li class="list-group-item" ng-if="stateShowVM.state.counseling != 0">
-        <p>{{stateShowVM.state.counseling}}</p>
-      </li>
-      <li class="list-group-item" ng-if="stateShowVM.state.waiting_period != 0">
-        <p>{{stateShowVM.state.waiting_period}}</p>
+        <p>★ {{stateShowVM.state.counseling}}</p>
       </li>
       <li class="list-group-item" ng-if="stateShowVM.state.two_trips != 0">
-        <p>{{stateShowVM.state.two_trips}}</p>
+        <p>★ {{stateShowVM.state.two_trips}}</p>
       </li>
-    <a data-ui-sref="index">< Back</a>
+      <li class="list-group-item" ng-if="stateShowVM.state.save_self != 0">
+        <p>★ {{stateShowVM.state.save_self}}</p>
+      </li>
+      <li class="list-group-item" ng-if="stateShowVM.state.state_restrict !=0">
+        <p>★ {{stateShowVM.state.state_restrict}}</p>
+      </li>
+      <li class="list-group-item" ng-if="stateShowVM.state.roe_repeal != 0">
+        <p>★ {{stateShowVM.state.roe_repeal}}</p>
+      </li>
+    </ul>
   </div>
+<a class="panel-heading" data-ui-sref="index">< Back</a>
