@@ -140,7 +140,27 @@
       "<tr><td>Score</td><td>"+ states[id].score+"</td></tr>"+
       "</table>";
     }
- }
+    var sampleData ={};	/* Sample random data. */
+    ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
+    "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH",
+    "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT",
+    "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN",
+    "WI", "MO", "AR", "OK", "KS", "LS", "VA"]
+    .forEach(function(d){
+      var low=Math.round(100*Math.random())
+      var mid=Math.round(100*Math.random())
+      var high=Math.round(100*Math.random());
+      sampleData[d] = {
+        low:d3.min([low,mid,high]),
+        high:d3.max([low,mid,high]),
+        avg:Math.round((low+mid+high)/3),
+        color:"#81AC8B"
+      };
+    });
+
+      /* draw states on id #statesvg */
+      uStates.draw("#statesvg", sampleData, tooltipHtml);
+  }
 
       function stateShowCtrlFunction(State, $stateParams, $state){
         var stateShowVM = this;
