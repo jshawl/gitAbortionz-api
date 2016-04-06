@@ -83,10 +83,10 @@
       }
 
 
-      function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
+      function tooltipHtml(n){	/* function to create html content string in tooltip div. */
         return "<h4>"+n+"</h4><table>"+
-        "<tr><td>Grade</td><td>"+ "Stuff" +"</td></tr>"+
-        "<tr><td>Average</td><td>"+ "Stuff" +"</td></tr>"+
+        "<tr><td>Grade</td><td>"+ +"</td></tr>"+
+        "<tr><td>Average</td><td>"+ +"</td></tr>"+
         "<tr><td>High</td><td>"+"Stuff"+"</td></tr>"+
         "</table>";
       }
@@ -116,4 +116,4 @@
       }
 
 
-    })();
+})();
