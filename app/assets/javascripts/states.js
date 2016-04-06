@@ -22,6 +22,7 @@
   .controller("stateShowController", [
     "State",
     "$stateParams",
+    "$state",
     stateShowCtrlFunction
   ])
   .factory("Post", [
@@ -123,9 +124,9 @@
       "<tr><td>Score</td><td>"+ states[id].score+"</td></tr>"+
       "</table>";
     }
+ }
 
-
-      function stateShowCtrlFunction(State, $stateParams){
+      function stateShowCtrlFunction(State, $stateParams, $state){
         var stateShowVM = this;
         console.log("here!");
         stateShowVM.state = State.get({state_id: $stateParams.state_id})
@@ -158,7 +159,7 @@
           })
 
           .on("click", function(){
-            stateShowVM.state.go("show",{state_id:$(this).attr("data-state")})
+            $state.go("show",{state_id:$(this).attr("data-state")})
             console.log($(this).attr("data-state"))
           })
           .on("mouseover", mouseOver).on("mouseout", mouseOut);
