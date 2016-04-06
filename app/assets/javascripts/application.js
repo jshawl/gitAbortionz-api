@@ -14,3 +14,4 @@
 //= require turbolinks
 //= require US
 //= require states
+//= require posts
