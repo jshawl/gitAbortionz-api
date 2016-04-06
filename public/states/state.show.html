@@ -2,12 +2,12 @@
 </script>
 <script src="/states/US.js"></script>
 
-<div id="tooltip"></div>
-<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
+<div id="tooltip"></div><!-- svg to hold the map. -->
 <script src="http://d3js.org/d3.v3.min.js"
 ></script>
 <script>
-$("document").
+
+
 uStates.draw = function(id, data, toolTip){
 		function mouseOver(d){
 			d3.select("#tooltip").transition().duration(200).style("opacity", 0.9);
@@ -71,4 +71,5 @@ uStates.draw = function(id, data, toolTip){
     <p ng-if="stateShowVM.state.waiting_period != 0">{{stateShowVM.state.waiting_period}}</p>
     <p ng-if="stateShowVM.state.two_trips != 0">{{stateShowVM.state.two_trips}}</p>
 <a data-ui-sref="index">Back</a>
+<svg width="960" height="800" id="statesvg"></svg>
   </div>
