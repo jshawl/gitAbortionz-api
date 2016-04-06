@@ -16,3 +16,4 @@
 //= require posts
 //= require states
 //= require posts
+//= require map

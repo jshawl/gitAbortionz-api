@@ -67,6 +67,7 @@
     text-align: center;
   }
   #statesvg{
+    padding-top: 50px;
     margin: 0px auto;
   }
 
@@ -1487,3 +1488,8 @@ li.collection-item {
 .centered {
   text-align: center;
 }
+
+  svg{
+    display: block;
+    margin: 0 auto;
+  }

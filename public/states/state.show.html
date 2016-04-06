@@ -1,13 +1,13 @@
-<div class="container">
-<h1>{{stateShowVM.state.name}}</h2>
-<div class="panel panel-primary">
-    <div class="panel-heading">
-      <h4 class="page-title">NARAL State Grade: {{stateShowVM.state.grade}}</h4>
-    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+</script>
+<script src="/states/US.js"></script>
 
+<div id="tooltip"></div><!-- svg to hold the map. -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src=> </script>
+<div class="stateid">
   <div class="panel-body panel-primary">
     <h4>Current State Policies:</h4>
-  </div>
     <ul class="list-group">
       <li class="list-group-item text-danger" ng-if="stateShowVM.state.waiting_period != 0">
         <p>★ {{stateShowVM.state.waiting_period}}</p>
@@ -28,6 +28,7 @@
         <p>★ {{stateShowVM.state.roe_repeal}}</p>
       </li>
     </ul>
+    <a class="panel-heading" data-ui-sref="index">< Back</a>
+    <svg width="960" height="800" id="statesvg"></svg>
   </div>
-<a class="panel-heading" data-ui-sref="index">< Back</a>
 </div>
