@@ -5,3 +5,7 @@
 <p>{{postShowVM.post.author}}</p>
 <p>{{postShowVM.post.created_at}}</p>
 </div>
+<button type="button" data-ui-sref="postShow({id: postShowVM.post.id})">Edit</button>
+<div>
+  <post-form data-post="postShowVM.post"></post-form>
+</div>
