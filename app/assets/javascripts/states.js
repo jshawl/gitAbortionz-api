@@ -38,7 +38,12 @@
     "Post",
     "$state",
     postShowControllerFunction
+  ])
+  .directive("postForm", [
+    "Post",
+     postFormFunction
   ]);
+
 
   function postIndexCtrlFunction(Post, $state){
     var postIndexVM = this;
@@ -55,6 +60,11 @@
       update: {method: "PUT"}
     });
     return Post;
+  }
+  function postFormFunction(Destination){
+     return{
+       templateUrl: "states/_postform.html"
+     }
   }
 
   function RouterFunction($stateProvider){
