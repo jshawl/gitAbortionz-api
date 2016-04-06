@@ -7007,3 +7007,13 @@ a.list-group-item-danger.active:focus {
 .popover-title {
   border: none;
 }
+.collection {
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.collection .collection-item.avatar .title {
+  font-size: 16px;
+}

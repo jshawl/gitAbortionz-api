@@ -15,6 +15,7 @@
   <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag "bootstrap", property: :stylesheet %>
+  <%= stylesheet_link_tag "minimalize", property: :stylesheet %>
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -25,7 +26,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active"><a data-ui-sref="index">States<span class="sr-only">(current)</span></a></li>
-          <li><a data-ui-sref="posts">Our Stories</a></li>
+          <li><a data-ui-sref="postIndex">Our Stories</a></li>
         </ul>
       </div>
     </div>

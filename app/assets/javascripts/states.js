@@ -70,11 +70,10 @@
         .data(uStatePaths).enter().append("path").attr("class","state").attr("d",function(d){ return d.d; })
         .style("fill",function(d){
           try{
-             return "rgb("+states[d.id].score+",0,200)"
+             return "rgb("+states[d.id].score+",150,175)"
           }catch(e){
             return "rgb(0,0,0)"
           }
-
           })
         .attr("data-state", function(d){
 
