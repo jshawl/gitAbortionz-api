@@ -1,7 +1,9 @@
-<h2>Post Show Page</h2>
-<div>
-<p>{{postShowVM.post.title}}</p>
-<p>{{postShowVM.post.content}}</p>
-<p>{{postShowVM.post.author}}</p>
-<p>{{postShowVM.post.created_at}}</p>
+<div class="container">
+  <div class="jumbotron">
+    <h1>{{postShowVM.post.title}}</h1>
+    <p><strong>{{postShowVM.post.author}}</strong><br />
+      <em>{{postShowVM.post.created_at}}</em></p>
+    <p>{{postShowVM.post.content}}</p>
+  </div>
 </div>
+<a class="btn btn-primary btn-lg" data-ui-sref="postIndex">< Back</a>
