@@ -5,11 +5,15 @@ states = JSON.parse(File.read("db/states.json"))
 # story posts seed data
 stories = JSON.parse(File.read("db/posts_data.json"))
 
+comments = JSON.parse(File.read("db/comments.json"))
+
 State.destroy_all
 Post.destroy_all
+Comment.destroy_all
 
 Post.create!(stories)
 State.create!(states)
+Comment.create!(comments)
 
 # State.create!(data)
 #
