@@ -47,13 +47,11 @@
   function postShowControllerFunction(Post, $stateParams){
     var postShowVM = this;
     postShowVM.post = Post.get({id: $stateParams.params.id})
-    console.log($stateParams.params.id)
   }
 
   function postFactoryFunction($resource){
     var Post = $resource("/posts/:id", {},{
-      update: {method: "PUT"},
-      get: {method: "GET", isArray: false}
+      update: {method: "PUT"}
     });
     return Post;
   }
