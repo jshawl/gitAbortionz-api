@@ -15,3 +15,4 @@
 //= require US
 //= require posts
 //= require states
+//= require posts

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> d833c89676034e9bfc460b499535241a8d16cf3c
 "use strict";
 (function(){
   angular

@@ -1,19 +1,19 @@
-policies = JSON.parse(File.read("db/states_policies.json"))
-data = JSON.parse(File.read("db/states_data.json"))
+
+#state data seeds
+states = JSON.parse(File.read("db/states.json"))
+
+# story posts seed data
 stories = JSON.parse(File.read("db/posts_data.json"))
-rank = JSON.parse(File.read("db/states_ranking.json"))
 
 State.destroy_all
-
 Post.destroy_all
 
 Post.create!(stories)
+State.create!(states)
 
-State.create!(policies)
-
-State.create!(data)
-
-State.create!(rank)
+# State.create!(data)
+#
+# State.create!(rank)
 
 
 # This file should contain all the record creation needed to seed the database with its default values.

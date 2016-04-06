@@ -1,3 +1,12 @@
-<h2>{{stateShowVM.state.measure_name}}</h2>
-<p>WHATEVER</p>
-<p>{{stateShowVM.state.grade}}</p>
+
+<div class="states">
+    <h2 class="page-header">{{stateShowVM.state.name}}</h2>
+    <p ng-if="stateShowVM.state.grade != 0">NARAL Grade: {{stateShowVM.state.grade}}</p>
+    <p ng-if="stateShowVM.state.state_restrict !=0">{{stateShowVM.state.state_restrict}}</p>
+    <p ng-if="stateShowVM.state.roe_repeal != 0">{{stateShowVM.state.roe_repeal}}</p>
+    <p ng-if="stateShowVM.state.save_self != 0">{{stateShowVM.state.save_self}}</p>
+    <p ng-if="stateShowVM.state.counseling != 0">{{stateShowVM.state.counseling}}</p>
+    <p ng-if="stateShowVM.state.waiting_period != 0">{{stateShowVM.state.waiting_period}}</p>
+    <p ng-if="stateShowVM.state.two_trips != 0">{{stateShowVM.state.two_trips}}</p>
+<a data-ui-sref="index">Back</a>
+  </div>
