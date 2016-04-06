@@ -40,7 +40,7 @@
   }
 
   function postFactoryFunction($resource){
-    var Post = $resource("/posts/:post_id", {},{
+    var Post = $resource("/posts/:id", {},{
       update: {method: "PUT"}
     });
     return Post;
@@ -81,66 +81,76 @@
     stateIndexVM.states = State.all;
     console.log("Here");
     uStates.draw = function(id, data, toolTip){
-    		function mouseOver(d){
-    			d3.select("#tooltip").transition().duration(200).style("opacity", 0.9);
+      function mouseOver(d){
+        d3.select("#tooltip").transition().duration(200).style("opacity", 0.9);
+        console.log("data",data)
+        d3.select("#tooltip").html(toolTip(d.n, d.id))
+        .style("left", (d3.event.pageX) + "px")
+        .style("top", (d3.event.pageY - 28) + "px");
+      }
 
-    			d3.select("#tooltip").html(toolTip(d.n, data[d.id]))
-    				.style("left", (d3.event.pageX) + "px")
-    				.style("top", (d3.event.pageY - 28) + "px");
-    		}
+      function mouseOut(){
+        d3.select("#tooltip").transition().duration(500).style("opacity", 0);
+      }
 
-    		function mouseOut(){
-    			d3.select("#tooltip").transition().duration(500).style("opacity", 0);
-    		}
+      d3.select(id).selectAll(".state")
+      .data(uStatePaths).enter().append("path").attr("class","state").attr("d",function(d){ return d.d; })
+      .style("fill",function(d){
+        try{
+           return "rgb("+states[d.id].score+",0,200)"
+        }catch(e){
+          return "rgb(0,0,0)"
+        }
 
-    		d3.select(id).selectAll(".state")
-    			.data(uStatePaths).enter().append("path").attr("class","state").attr("d",function(d){ return d.d; })
-    			.style("fill",function(d){ return data[d.id].color; })
-    			.attr("data-state", function(d){
+        })
+      .attr("data-state", function(d){
 
-    				 return d.id
-    			})
+        return d.id
+      })
 
-    			.on("click", function(){
-            $state.go("show",{state_id:$(this).attr("data-state")})
-            console.log($(this).attr("data-state"))
-          })
-    			.on("mouseover", mouseOver).on("mouseout", mouseOut);
+      .on("click", function(){
+        $state.go("show",{state_id:$(this).attr("data-state")})
+        console.log($(this).attr("data-state"))
+      })
+      .on("mouseover", mouseOver).on("mouseout", mouseOut);
 
-    	}
+    }
 
 
-    	function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
-    		return "<h4>"+n+"</h4><table>"+
-    			"<tr><td>Grade</td><td>"+ "Stuff" +"</td></tr>"+
-    			"<tr><td>Average</td><td>"+ "Stuff" +"</td></tr>"+
-    			"<tr><td>High</td><td>"+"Stuff"+"</td></tr>"+
-    			"</table>";
-    	}
+    function tooltipHtml(n,id){	/* function to create html content string in tooltip div. */
+      return "<h4>"+n+"</h4><table>"+
+      "<tr><td>Grade</td><td>"+ states[id].grade+"</td></tr>" +
+      "<tr><td>Score</td><td>"+ states[id].score+"</td></tr>"+
+      "</table>";
+    }
 
-    	var sampleData ={};	/* Sample random data. */
-    	["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
-    	"ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH",
-    	"MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT",
-    	"CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN",
-    	"WI", "MO", "AR", "OK", "KS", "LS", "VA"]
-    		.forEach(function(d){
-    			var low=Math.round(100*Math.random()),
-    				mid=Math.round(100*Math.random()),
-    				high=Math.round(100*Math.random());
-    			sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]),
-    					avg:Math.round((low+mid+high)/3), color:"#81AC8B"};
-    		});
+    var sampleData ={};	/* Sample random data. */
+    ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
+    "ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH",
+    "MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT",
+    "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN",
+    "WI", "MO", "AR", "OK", "KS", "LS", "VA"]
+    .forEach(function(d){
+      var low=Math.round(100*Math.random())
+      var mid=Math.round(100*Math.random())
+      var high=Math.round(100*Math.random());
+      sampleData[d] = {
+        low:d3.min([low,mid,high]),
+        high:d3.max([low,mid,high]),
+        avg:Math.round((low+mid+high)/3),
+        color:"#81AC8B"
+      };
+    });
 
-    	/* draw states on id #statesvg */
-    	uStates.draw("#statesvg", sampleData, tooltipHtml);
-  }
+      /* draw states on id #statesvg */
+      uStates.draw("#statesvg", sampleData, tooltipHtml);
+    }
 
-  function stateShowCtrlFunction(State, $stateParams){
-    var stateShowVM = this;
-    console.log("here!");
-     stateShowVM.state = State.get({state_id: $stateParams.state_id})
-  }
+    function stateShowCtrlFunction(State, $stateParams){
+      var stateShowVM = this;
+      console.log("here!");
+      stateShowVM.state = State.get({state_id: $stateParams.state_id})
+    }
 
 
 })();
