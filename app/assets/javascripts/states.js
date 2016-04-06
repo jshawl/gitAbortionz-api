@@ -23,7 +23,28 @@
     "State",
     "$stateParams",
     stateShowCtrlFunction
+  ])
+  .factory("Post", [
+    "$resource",
+    postFactoryFunction
+  ])
+  .controller("postIndexController", [
+    "Post",
+    "$state",
+    postIndexCtrlFunction
   ]);
+
+  function postIndexCtrlFunction(Post, $state){
+    var postIndexVM = this;
+    postIndexVM.posts = Post.query();
+  }
+
+  function postFactoryFunction($resource){
+    var Post = $resource("/posts/:post_author", {},{
+      update: {method: "PUT"}
+    });
+    return Post;
+  }
 
   function RouterFunction($stateProvider){
     $stateProvider

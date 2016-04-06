@@ -13,5 +13,5 @@
 //= require jquery
 //= require turbolinks
 //= require US
-//= require states
 //= require posts
+//= require states
