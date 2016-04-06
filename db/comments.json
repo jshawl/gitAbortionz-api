@@ -1,0 +1,32 @@
+[
+  {
+    "post_id": "1",
+    "author": "Clarissa",
+    "content": "I like your post",
+    "created_at": 20160329
+  },
+  {
+    "post_id": "2",
+    "author": "Isaac",
+    "content": "I empathize with you",
+    "created_at": 20160315
+  },
+  {
+    "post_id": "3",
+    "author": "Yinka",
+    "content": "goodluck",
+    "created_at": 20160312
+  },
+  {
+    "post_id": "4",
+    "author": "Wombat",
+    "content": "You are my hero!",
+    "created_at": 20160329
+  },
+  {
+    "post_id": "5",
+    "author": "Jesse",
+    "content": "take heart",
+    "created_at": 20160329
+  }
+]
