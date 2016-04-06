@@ -56,8 +56,8 @@
       uStates.draw = function(id, data, toolTip){
         function mouseOver(d){
           d3.select("#tooltip").transition().duration(200).style("opacity", 0.9);
-
-          d3.select("#tooltip").html(toolTip(d.n, data[d.id]))
+          console.log("data",data)
+          d3.select("#tooltip").html(toolTip(d.n, d.id))
           .style("left", (d3.event.pageX) + "px")
           .style("top", (d3.event.pageY - 28) + "px");
         }
@@ -68,7 +68,14 @@
 
         d3.select(id).selectAll(".state")
         .data(uStatePaths).enter().append("path").attr("class","state").attr("d",function(d){ return d.d; })
-        .style("fill",function(d){ return data[d.id].color; })
+        .style("fill",function(d){
+          try{
+             return "rgb("+states[d.id].score+",0,200)"
+          }catch(e){
+            return "rgb(0,0,0)"
+          }
+
+          })
         .attr("data-state", function(d){
 
           return d.id
@@ -83,11 +90,10 @@
       }
 
 
-      function tooltipHtml(n){	/* function to create html content string in tooltip div. */
+      function tooltipHtml(n,id){	/* function to create html content string in tooltip div. */
         return "<h4>"+n+"</h4><table>"+
-        "<tr><td>Grade</td><td>"+ +"</td></tr>"+
-        "<tr><td>Average</td><td>"+ +"</td></tr>"+
-        "<tr><td>High</td><td>"+"Stuff"+"</td></tr>"+
+        "<tr><td>Grade</td><td>"+ states[id].grade+"</td></tr>" +
+        "<tr><td>Score</td><td>"+ states[id].score+"</td></tr>"+
         "</table>";
       }
 
@@ -98,12 +104,16 @@
       "CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN",
       "WI", "MO", "AR", "OK", "KS", "LS", "VA"]
       .forEach(function(d){
-        var low=Math.round(100*Math.random()),
-        mid=Math.round(100*Math.random()),
-        high=Math.round(100*Math.random());
-        sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]),
-          avg:Math.round((low+mid+high)/3), color:"#81AC8B"};
-        });
+        var low=Math.round(100*Math.random())
+        var mid=Math.round(100*Math.random())
+        var high=Math.round(100*Math.random());
+        sampleData[d] = {
+          low:d3.min([low,mid,high]),
+          high:d3.max([low,mid,high]),
+          avg:Math.round((low+mid+high)/3),
+          color:"#81AC8B"
+        };
+      });
 
         /* draw states on id #statesvg */
         uStates.draw("#statesvg", sampleData, tooltipHtml);
