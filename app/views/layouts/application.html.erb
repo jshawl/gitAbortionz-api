@@ -16,6 +16,8 @@
   <%= stylesheet_link_tag "bootstrap", property: :stylesheet %>
 </head>
 <body>
+  <%= yield %>
+  <div data-ng-app="abortion">
   <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
@@ -29,8 +31,6 @@
       </div>
     </div>
   </nav>
-  <%= yield %>
-  <div data-ng-app="abortion">
     <main data-ui-view></main>
   </div>
 
