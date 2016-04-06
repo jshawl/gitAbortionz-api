@@ -61,3 +61,11 @@
 	#tooltip tr td:nth-child(2){
 		text-align:center;
 	}
+
+  h2{
+    padding-top: 50px;
+    text-align: center;
+  }
+  #statesvg{
+    margin: 0px auto;
+  }
