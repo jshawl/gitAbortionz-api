@@ -2,11 +2,20 @@
 </script>
 <script src="/states/US.js"></script>
 
+<<<<<<< HEAD
 <div id="tooltip"></div><!-- svg to hold the map. -->
 <script src="http://d3js.org/d3.v3.min.js"
 ></script>
 <script>
 
+=======
+<div id="tooltip"></div>
+<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
+<script src="http://d3js.org/d3.v3.min.js"
+></script>
+<script>
+$("document").
+>>>>>>> master
 uStates.draw = function(id, data, toolTip){
 		function mouseOver(d){
 			d3.select("#tooltip").transition().duration(200).style("opacity", 0.9);
@@ -28,7 +37,10 @@ uStates.draw = function(id, data, toolTip){
 				 return d.n
 			})
 			.on("click", function(){
+<<<<<<< HEAD
         console.log("stuff")
+=======
+>>>>>>> master
         console.log($(this).attr("data-state"))
       })
 			.on("mouseover", mouseOver).on("mouseout", mouseOut);
