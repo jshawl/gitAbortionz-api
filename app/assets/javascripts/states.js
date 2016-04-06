@@ -38,6 +38,12 @@
       templateUrl: "/states/state.show.html",
       controller: "stateShowController",
       controllerAs: "stateShowVM"
+    })
+    .state("postIndex", {
+      url: "/posts",
+      templateUrl: "/posts/post.index.html",
+      controller: "postIndexController",
+      controllerAs: "postShowVM"
     });
   }
 

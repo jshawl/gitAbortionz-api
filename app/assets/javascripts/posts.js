@@ -1,23 +1,39 @@
-//=require angularjs
-//=require angular-resource
-
 "use strict";
 (function(){
   angular
   .module("posts", [
+    "ui.router",
     "ngResource"
-    ])
-    .controller("posts_controller", PostController);
+  ])
+  .factory("Post", [
+    postFactoryFunction
+  ])
+  .controller("postIndexController", [
+    "Post",
+    "$state",
+    postIndexCtrlFunction
+  ]);
 
-    PostController.$inject= ["$resource"];
+  function postFactoryFunction($resource){
+    var Post = $resource("/posts/:post_author", {},{
+      update: {method: "PUT"}
+    });
+    Post.all = Post.query();
+      return Post;
+  }
 
-    function PostController($resource){
+
+  function PostController($resource){
     var vm = this;
     // check post_id
     var Post = $resource("/posts/:post_id", {},{
       update: {method: "PUT"}
     });
-    }
+  }
 
+  function postIndexCtrlFunction (State, $state){
+    var postIndexVM = this;
+    postIndexVM.posts = Post.all;
+  }
 
-    })();
+})();
