@@ -1,7 +1,5 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
-</script>
 <h2> All posts</h2>
-<div class="" data-ng-repeat="post in postShowVM.posts| orderBy:'-created_at'">
+<div class="" data-ng-repeat="post in postIndexVM.posts| orderBy:'-created_at'">
   {{post.title}}
   {{post.img}}
   {{post.content}}

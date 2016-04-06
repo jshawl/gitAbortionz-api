@@ -6,6 +6,7 @@ class PostsController < ActionController::Base
 
   def show
     @post = Post.find(params[:id])
+    render json: @post
   end
 
   def create
