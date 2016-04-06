@@ -1,8 +1,16 @@
-<h2> All posts</h2>
-<div class="" data-ng-repeat="post in postIndexVM.posts| orderBy:'-created_at'">
-  {{post.title}}
-  {{post.img}}
-  {{post.content}}
-  {{post.author}}
-  {{post.created_at}}
-</div>
+<h1 class="centered">Our Stories</h1>
+  <div class="container">
+    <p class="jumbotron">The landscape for abortion access is changing. Many states have passed laws that make it more difficult for a woman to choose to end a pregnancy, while some have gone the other direction and passed laws to protect a woman's right to choose. Every woman's story about whether or not to terminate a pregnancy is different, and deserves to be heard. Our hope is that by encouraging women to make their voices heard, we can  start a new and more personal conversation about abortion in America, and where we go from here. </p>
+        <ul class="collection" data-ng-repeat="post in postIndexVM.posts| orderBy:'-created_at'">
+          <li class="collection-item avatar">
+            <a data-ui-sref="postShow({id: post.id})">
+            <i class="material-icons circle green"></i>
+            <span class="title">"{{post.title}}"</span>
+            <p>{{post.author}}<br>
+            <em>Posted: {{post.created_at}}</em>
+            </p>
+          </a>
+            <a data-ui-sref="postShow({id: post.id})" class="secondary-content"><i class="material-icons">grade</i></a>
+          </li>
+        </ul>
+  </div>
