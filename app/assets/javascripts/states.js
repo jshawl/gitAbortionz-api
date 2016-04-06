@@ -32,11 +32,21 @@
     "Post",
     "$state",
     postIndexCtrlFunction
+  ])
+  .controller("postShowController", [
+    "Post",
+    "$state",
+    postShowControllerFunction
   ]);
 
   function postIndexCtrlFunction(Post, $state){
     var postIndexVM = this;
     postIndexVM.posts = Post.query();
+  }
+
+  function postShowControllerFunction(Post, $stateParams){
+    var postShowVM = this;
+    postShowVM.post = Post.get({id: $stateParams.params.id})
   }
 
   function postFactoryFunction($resource){
@@ -64,6 +74,12 @@
       url: "/posts",
       templateUrl: "/posts/post.index.html",
       controller: "postIndexController",
+      controllerAs: "postIndexVM"
+    })
+    .state("postShow", {
+      url: "/posts/:id",
+      templateUrl: "posts/post.show.html",
+      controller: "postShowController",
       controllerAs: "postShowVM"
     });
   }
