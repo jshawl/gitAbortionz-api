@@ -123,6 +123,41 @@
         var stateShowVM = this;
         console.log("here!");
         stateShowVM.state = State.get({state_id: $stateParams.state_id})
+        console.log("Here");
+        uStates.draw = function(id, data, toolTip){
+          function mouseOver(d){
+            d3.select("#tooltip").transition().duration(200).style("opacity", 0.9);
+            console.log("data",data)
+            d3.select("#tooltip").html(toolTip(d.n, d.id))
+            .style("left", (d3.event.pageX) + "px")
+            .style("top", (d3.event.pageY - 28) + "px");
+          }
+
+          function mouseOut(){
+            d3.select("#tooltip").transition().duration(500).style("opacity", 0);
+          }
+
+          d3.select(id).selectAll(".state")
+          .data(uStatePaths).enter().append("path").attr("class","state").attr("d",function(d){ return d.d; })
+          .style("fill",function(d){
+            try{
+               return "rgb("+states[d.id].score+",0,200)"
+            }catch(e){
+              return "rgb(0,0,0)"
+            }
+
+            })
+          .attr("data-state", function(d){
+
+            return d.id
+          })
+
+          .on("click", function(){
+            $state.go("show",{state_id:$(this).attr("data-state")})
+            console.log($(this).attr("data-state"))
+          })
+          .on("mouseover", mouseOver).on("mouseout", mouseOut);
+
       }
 
 
