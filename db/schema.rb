@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160406193336) do
+ActiveRecord::Schema.define(version: 20160407145600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,10 @@ ActiveRecord::Schema.define(version: 20160406193336) do
     t.string  "counseling"
     t.string  "waiting_period"
     t.string  "two_trips"
+    t.integer "providers_change"
+    t.integer "abrtn_providers"
+    t.integer "percent_counties_noclinic"
+    t.integer "percent_change_clinics"
   end
 
   add_foreign_key "comments", "posts"
