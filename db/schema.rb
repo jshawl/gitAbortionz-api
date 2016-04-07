@@ -16,16 +16,6 @@ ActiveRecord::Schema.define(version: 20160407145600) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "comments", force: :cascade do |t|
-    t.string   "author"
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.integer  "post_id"
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
-
   create_table "posts", force: :cascade do |t|
     t.string "author"
     t.string "title"
@@ -61,5 +51,4 @@ ActiveRecord::Schema.define(version: 20160407145600) do
     t.integer "percent_change_clinics"
   end
 
-  add_foreign_key "comments", "posts"
 end
