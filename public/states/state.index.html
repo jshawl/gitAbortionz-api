@@ -1,15 +1,20 @@
-<h2>All States(index page)</h2>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
-</script>
-
-
-<div id="tooltip"></div>
-<!-- svg to hold the map. -->
-<script src="http://d3js.org/d3.v3.min.js"
-></script>
-<svg width="960" height="800" id="statesvg"></svg>
-<div data-ng-repeat="state in StateIndexViewModel.states">
+<div class="container">
+  <div class="jumbotron">
+    <h1>The State of Choice in 2016</h1>
+    <p>Today in America, a woman's right to choose varies depending on where she lives. Many states have passed laws that make it more difficult for a woman to end a pregnancy, while some have gone the other direction and passed laws to protect a woman's right to choose. Click on a state below to learn more about the current facts on the ground.</p>
+    <p>You can also learn more about the personal side of abortion access. <a data-ui-sref="postIndex"><strong>Click here to read women's stories from all across the country.</strong></a></p> 
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+  </script>
 
 
+  <div id="tooltip"></div>
+  <!-- svg to hold the map. -->
+  <script src="http://d3js.org/d3.v3.min.js"
+  ></script>
+    <svg width="960" height="800" id="statesvg"></svg>
+    <div data-ng-repeat="state in StateIndexViewModel.states">
+
+
+  </div>
 </div>
