@@ -5,11 +5,16 @@ states = JSON.parse(File.read("db/states.json"))
 # story posts seed data
 stories = JSON.parse(File.read("db/posts_data.json"))
 
-State.destroy_all
-Post.destroy_all
+ActiveRecord::Base.connection.disable_referential_integrity do
 
-Post.create!(stories)
-State.create!(states)
+  State.destroy_all
+  Post.destroy_all
+
+  Post.create!(stories)
+  State.create!(states)
+
+end
+
 
 # State.create!(data)
 #
