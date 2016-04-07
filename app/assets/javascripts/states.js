@@ -38,11 +38,17 @@
     "Post",
     "$state",
     postShowControllerFunction
+  ])
+  .directive("postForm", [
+    "Post",
+     postFormFunction
   ]);
+
 
   function postIndexCtrlFunction(Post, $state){
     var postIndexVM = this;
     postIndexVM.posts = Post.query();
+    postIndexVM.newPosts = new Post();
   }
 
   function postShowControllerFunction(Post, $stateParams){
@@ -55,6 +61,33 @@
       update: {method: "PUT"}
     });
     return Post;
+  }
+  function postFormFunction(Post){
+     return{
+       templateUrl: "states/_postform.html",
+       scope: {
+        post:  "=",
+        formMethod:   "@"
+      },
+      link: function(scope){
+        console.log(scope.post)
+        scope.create = function(){
+          Post.save(scope.post, function(response){
+            Post.all.push(response);
+          });
+        }
+        scope.update = function(){
+          Post.update({id: scope.post.id}, scope.post, function(response){
+            console.log("Successful");
+          });
+        }
+        scope.delete = function(){
+          Post.remove({id: scope.post.id}, function(response){
+            console.log("Successful");
+          });
+        }
+      }
+    }
   }
 
   function RouterFunction($stateProvider){

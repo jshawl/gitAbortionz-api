@@ -6,4 +6,10 @@
     <p>{{postShowVM.post.content}}</p>
   </div>
 </div>
+
+<button type="button" data-ui-sref="postShow({id: postShowVM.post.id})">Edit</button>
+<div>
+  <post-form data-post="postShowVM.post"></post-form>
+</div>
+
 <a class="btn btn-primary btn-lg" data-ui-sref="postIndex">< Back</a>
