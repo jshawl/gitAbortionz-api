@@ -5,12 +5,11 @@
       <em>{{postShowVM.post.created_at}}</em></p>
     <p>{{postShowVM.post.content}}</p>
   </div>
-</div>
+
+  <a class="btn btn-primary btn-lg" data-ui-sref="postIndex">< Back</a>
 
 <!-- <button type="button" data-ui-sref="postShow({id: postShowVM.post.id})">Edit</button> -->
-<div>
+
   <h2>Edit Your Story</h2>
   <post-form data-post="postShowVM.post"></post-form>
 </div>
-
-<a class="btn btn-primary btn-lg" data-ui-sref="postIndex">< Back</a>

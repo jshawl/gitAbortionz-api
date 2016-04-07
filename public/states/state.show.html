@@ -3,11 +3,11 @@
 <script src="/states/US.js"></script>
 
 <div class="container">
+  <h1 class="centered">{{stateShowVM.state.name}}</h2>
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h4 class="page-title">NARAL State Grade: {{stateShowVM.state.grade}}</h4>
     </div>
-    <h1 class="centered">{{stateShowVM.state.name}}</h2>
       <div id="tooltip"></div><!-- svg to hold the map. -->
       <script src="http://d3js.org/d3.v3.min.js"></script>
       <script src=> </script>
@@ -50,7 +50,7 @@
             </li>
           </ul>
         </div>
-        <a class="panel-heading" data-ui-sref="index">< Back</a>
+        <a class="panel-heading btn btn-primary btn-lg" data-ui-sref="index">< Back</a>
         <svg width="960" height="800" id="statesvg"></svg>
       </div>
     </div>
