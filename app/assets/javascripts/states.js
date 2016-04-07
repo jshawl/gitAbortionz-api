@@ -42,6 +42,10 @@
   .directive("postForm", [
     "Post",
      postFormFunction
+  ])
+  .directive("commentPage", [
+    "Comment",
+    commentPageFunction
   ]);
 
 
@@ -69,6 +73,14 @@
         post:  "=",
         formMethod:   "@"
       },
+      function commentPageFunction(Comment){
+        return {
+          templateUrl: "states/_comments.html",
+          scope: {
+           comment:  "="
+        }
+      }
+    },
       link: function(scope){
         console.log(scope.post)
         scope.create = function(){
