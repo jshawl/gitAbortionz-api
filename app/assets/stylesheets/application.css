@@ -1488,8 +1488,13 @@ li.collection-item {
 .centered {
   text-align: center;
 }
-
-  svg{
-    display: block;
-    margin: 0 auto;
-  }
+svg{
+  display: block;
+  margin: 0 auto;
+}
+textarea {
+  height: 150px;
+}
+textarea {
+    resize: vertical;
+}
