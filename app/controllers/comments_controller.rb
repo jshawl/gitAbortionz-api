@@ -1,18 +1,19 @@
 class CommentsController < ActionController::Base
 
-def index
-  @post = Post.find(params[:post_id])
-  @comments = @post.comments
-render json: @post.comments.all
-end
+  def index
+    @post = Post.find(params[:post_id])
+    @comments = @post.comments
+    render json: @post.comments.all
+  end
 
-def new
+  def new
     @post = Post.find(params[:post_id])
     @comment = Comment.new
   end
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
+    render json: @post.comments
   end
   def edit
     @post = Post.find(params[:post_id])
@@ -32,7 +33,6 @@ def new
   end
   private
   def comment_params
-    params.require(:comment).permit(:body)
+    params.require(:comment).permit(:author, :content, :date)
   end
-
 end
