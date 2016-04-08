@@ -1,14 +1,19 @@
-class CommentsController < ActionController::Base
+  class CommentsController < ActionController::Base
 
-def index
-  @post = Post.find(params[:post_id])
-  @comments = @post.comments
-render json: @post.comments
-end
-def create
+  def index
+    @post = Post.find(params[:post_id])
+    @comments = @post.comments
+    render json: @post.comments.all
+  end
+
+  def new
+    @post = Post.find(params[:post_id])
+    @comment = Comment.new
+  end
+  def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)
-    redirect_to post_path(@post)
+    render json: @post.comments
   end
   def edit
     @post = Post.find(params[:post_id])

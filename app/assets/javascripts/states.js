@@ -42,6 +42,10 @@
   .directive("postForm", [
     "Post",
      postFormFunction
+  ])
+  .directive("commentPage", [
+    "Comment",
+    commentPageFunction
   ]);
 
 
@@ -89,6 +93,15 @@
       }
     }
   }
+
+  function commentPageFunction(Comment){
+    return {
+      templateUrl: "states/_comments.html",
+      scope: {
+       comment:  "="
+    }
+  }
+}
 
   function RouterFunction($stateProvider){
     $stateProvider
