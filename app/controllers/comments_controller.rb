@@ -1,4 +1,4 @@
-class CommentsController < ActionController::Base
+  class CommentsController < ActionController::Base
 
   def index
     @post = Post.find(params[:post_id])

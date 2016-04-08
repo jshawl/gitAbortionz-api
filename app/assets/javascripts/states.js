@@ -73,14 +73,6 @@
         post:  "=",
         formMethod:   "@"
       },
-      function commentPageFunction(Comment){
-        return {
-          templateUrl: "states/_comments.html",
-          scope: {
-           comment:  "="
-        }
-      }
-    },
       link: function(scope){
         console.log(scope.post)
         scope.create = function(){
@@ -101,6 +93,15 @@
       }
     }
   }
+
+  function commentPageFunction(Comment){
+    return {
+      templateUrl: "states/_comments.html",
+      scope: {
+       comment:  "="
+    }
+  }
+}
 
   function RouterFunction($stateProvider){
     $stateProvider
