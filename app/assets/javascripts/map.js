@@ -1,4 +1,6 @@
 uStates.draw = function(id, data, toolTip){
+// what's the difference between this function and the one in US.js?
+// please remove duplicate code
 		function mouseOver(d){
 			d3.select("#tooltip").transition().duration(200).style("opacity", 0.9);
 

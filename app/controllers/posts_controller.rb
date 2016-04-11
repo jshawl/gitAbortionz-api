@@ -11,6 +11,7 @@ class PostsController < ActionController::Base
 
   def create
     @post = Post.create(post_params)
+    # render json: @post when successful
   end
 
   def update

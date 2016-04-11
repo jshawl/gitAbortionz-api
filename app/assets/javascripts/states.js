@@ -42,7 +42,19 @@
   .directive("postForm", [
     "Post",
      postFormFunction
-  ])
+  ]) // you mentioned wanting feedback on how to use a directive,
+  // but it looks like you are doing this correctly! let me know if you'd
+  // like feedback on anything else.
+  // .directive("postShow", function(scope){
+  //   return {
+  //     scope: {
+  //       post: "=",
+  //       templateUrl: ...
+  //     }
+  //   }
+  // })
+  // and in html
+  // <div data-post-show data-post="postShowVM.post"></div>
   .directive("commentPage", [
     "Comment",
     commentPageFunction
@@ -144,6 +156,7 @@
     stateIndexVM.states = State.all;
     console.log("Here");
     uStates.draw = function(id, data, toolTip){
+    // this is the 3rd draw function definition!
       function mouseOver(d){
         d3.select("#tooltip").transition().duration(200).style("opacity", 0.9);
         console.log("data",data)
@@ -213,6 +226,7 @@
         console.log("here!");
         stateShowVM.state = State.get({state_id: $stateParams.state_id})
         uStates.draw = function(id, data, toolTip){
+	// the 4th one
           function mouseOver(d){
             d3.select("#tooltip").transition().duration(200).style("opacity", 0.9);
             console.log("data",data)

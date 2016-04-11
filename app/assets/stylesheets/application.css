@@ -15,7 +15,7 @@
 
  .state{
  		fill: none;
-
+/* indent code correctly */
  		stroke: #FFF;
  		stroke-width: 1;
  	}
@@ -185,6 +185,7 @@
   .cyan {
   background-color: #00bcd4 !important;
 }
+/* excellent class names! avoid !important when possible... */
 
 .cyan-text {
   color: #00bcd4 !important;
@@ -1498,3 +1499,7 @@ textarea {
 textarea {
     resize: vertical;
 }
+
+/* this css file is massive. Consider refactoring and using sass to generate
+ * similar but repeated css.
+ * */
